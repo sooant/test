@@ -1,6 +1,7 @@
 package com.example.sooantpractice;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -18,7 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-public class Mainpage extends AppCompatActivity {
+public class Mainpage extends Activity {
     final private static String TAG = "GILBOMI";
     Button btn_photo;
     ImageView iv_photo;
@@ -76,7 +77,7 @@ public class Mainpage extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
-
+        System.out.println("bbbbbbbbbbbbbbb");
         if (requestCode == TAKE_PICTURE) {
             if (resultCode == RESULT_OK) {
                 Uri photoUri = intent.getData();

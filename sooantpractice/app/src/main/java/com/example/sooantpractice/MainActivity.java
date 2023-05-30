@@ -2,13 +2,14 @@ package com.example.sooantpractice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private EditText et_id;
     private Button btn_login;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 str = et_id.getText().toString();
+                System.out.println("aaaaaaaaaaa");
                 Intent intent = new Intent(MainActivity.this, Mainpage.class);
                 intent.putExtra("str",str);
                 startActivity(intent);  //액티비티 이동 구문
